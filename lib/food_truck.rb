@@ -20,4 +20,13 @@ attr_reader :name, :inventory
       @inventory[item_obj] = quantity
     end
   end
+
+  def potential_revenue
+    total_revenue = 0
+    @inventory.select do |item|
+      @inventory[item] > 0
+      total_revenue += item.price * @inventory[item]
+    end
+    total_revenue
+  end
 end
