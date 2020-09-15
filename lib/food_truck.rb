@@ -15,7 +15,7 @@ attr_reader :name, :inventory
 
   def stock(item_obj, quantity)
     if @inventory.include?(item_obj)
-      @inventory[item_obj] += item_obj.quantity + quantity
+      @inventory[item_obj] += quantity
     else
       @inventory[item_obj] = quantity
     end
