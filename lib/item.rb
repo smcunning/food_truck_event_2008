@@ -4,6 +4,4 @@ attr_reader :name, :price
     @name = details[:name]
     @price = (details[:price]).delete('$').to_f
   end
-
-
 end
