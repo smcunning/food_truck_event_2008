@@ -5,11 +5,15 @@ attr_reader :name, :inventory
     @inventory = {}
   end
 
-  def check_stock(item_obj)
+  def check_stock(item_obj, quantity = 0)
     if @inventory.include?(item_obj)
-      return item_obj.values
+      return @inventory[item_obj]
     else
       return 0
     end
+  end
+
+  def stock(item_obj, quantity)
+    @inventory[item_obj] = quantity
   end
 end
