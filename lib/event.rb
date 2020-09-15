@@ -4,4 +4,8 @@ attr_reader :name, :food_trucks
     @name = name
     @food_trucks = []
   end
+
+  def add_food_truck (food_truck_obj)
+    @food_trucks << food_truck_obj
+  end
 end
