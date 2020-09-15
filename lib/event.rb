@@ -8,4 +8,10 @@ attr_reader :name, :food_trucks
   def add_food_truck (food_truck_obj)
     @food_trucks << food_truck_obj
   end
+
+  def food_truck_names
+    @food_trucks.map do |food_truck|
+      food_truck.name
+    end 
+  end
 end
